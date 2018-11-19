@@ -5,6 +5,7 @@
     <attr name="contentTextSize" format="dimension"/>
     <attr name="contentTextColorRes" format="reference"/>
     <attr name="contentTextColorSelectRes" format="reference"/>
+    <attr name="contentTextColorDisableRes" format="reference"/>
     <declare-styleable name="FilterView">
         <attr name="titleTextSize"/>
         <attr name="titleTextColorRes"/>
@@ -16,7 +17,7 @@
         <attr name="contentTextSize"/>
         <attr name="contentTextColorRes"/>
         <attr name="contentTextColorSelectRes"/>
-
+        <attr name="contentTextColorDisableRes"/>
         <attr name="contentTextBackgroundRes" format="reference"/>
         <attr name="contentTextMargin" format="dimension"/>
         <attr name="multiSelect" format="boolean"/>

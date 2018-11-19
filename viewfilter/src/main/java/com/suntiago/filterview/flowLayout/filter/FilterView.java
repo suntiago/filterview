@@ -38,7 +38,8 @@ public class FilterView extends AutoLineFeedViewGroup implements View.OnClickLis
     int contentTextColor;
     //内容 文字的选中时的颜色
     int contentTextColorSelect;
-
+    //内容 文字不可点击时的颜色
+    int contentTextColorDisableRes;
     //内容 文字的大小
     int contentTextSize;
     //内容 文字的背景
@@ -79,12 +80,12 @@ public class FilterView extends AutoLineFeedViewGroup implements View.OnClickLis
         titleTextColor = typedArray.getColor(R.styleable.FilterView_titleTextColorRes,
                 getResources().getColor(R.color.filter_text_color_property));
         titleTextSize = typedArray.getDimensionPixelSize(R.styleable.FilterView_titleTextSize, 30);
-        contentTextColor = typedArray.getResourceId(R.styleable.FilterView_contentTextColorRes,
+        contentTextColor = typedArray.getColor(R.styleable.FilterView_contentTextColorRes,
                 getResources().getColor(R.color.filter_text_color_property));
-
         contentTextColorSelect = typedArray.getColor(R.styleable.FilterView_contentTextColorSelectRes,
                 getResources().getColor(R.color.filter_text_color_property_select));
-
+        contentTextColorDisableRes = typedArray.getColor(R.styleable.FilterView_contentTextColorDisableRes,
+                getResources().getColor(R.color.filter_text_color_property_disable));
         contentTextSize = typedArray.getDimensionPixelSize(R.styleable.FilterView_contentTextSize, 30);
         contentTextWidth = typedArray.getDimensionPixelSize(R.styleable.FilterView_contentTextWidth, 0);
         contentTextHeight = typedArray.getDimensionPixelSize(R.styleable.FilterView_contentTextHeight, 0);
@@ -138,13 +139,19 @@ public class FilterView extends AutoLineFeedViewGroup implements View.OnClickLis
         if (!autoSquare) {
             textView.setPadding(20, 15, 20, 15);
         }
-        if (choseFilter.contains(filterData)) {
-            textView.setSelected(true);
+        if (filterData.enable) {
+            textView.setEnabled(true);
+            if (choseFilter.contains(filterData)) {
+                textView.setSelected(true);
+            } else {
+                textView.setSelected(false);
+            }
+            textView.setOnClickListener(this);
         } else {
-            textView.setSelected(false);
+            textView.setEnabled(false);
+            textView.setTextColor(contentTextColorDisableRes);
         }
         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
-        textView.setOnClickListener(this);
         textView.setGravity(Gravity.CENTER);
         return textView;
     }
@@ -196,7 +203,7 @@ public class FilterView extends AutoLineFeedViewGroup implements View.OnClickLis
         for (int i = 0; i < getChildCount(); i++) {
             TextView textView = (TextView) getChildAt(i);
             FilterData data = (FilterData) textView.getTag();
-            if (data != null && FilterData.VALUE.equals(data.getType())) {
+            if (data != null && FilterData.VALUE.equals(data.getType()) && data.enable) {
                 if (mChoseFilter.contains(data)) {
                     textView.setSelected(true);
                     textView.setTextColor(contentTextColorSelect);
@@ -250,14 +257,14 @@ public class FilterView extends AutoLineFeedViewGroup implements View.OnClickLis
         this.contentTextSize = contentTextSize;
     }
 
-  /*  public int getContentTextColor() {
-        return contentTextColor;
-    }
+    /*  public int getContentTextColor() {
+          return contentTextColor;
+      }
 
-    public void setContentTextColor(int contentTextColor) {
-        this.contentTextColor = contentTextColor;
-    }
-*/
+      public void setContentTextColor(int contentTextColor) {
+          this.contentTextColor = contentTextColor;
+      }
+  */
     public int getTitleTextSize() {
         return titleTextSize;
     }

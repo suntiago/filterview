@@ -10,6 +10,7 @@ public class FilterData {
     String name;
     String value;
     String type;//title/content
+    boolean enable = true;
 
     public FilterData(String name, String value, String type) {
         this.name = name;
@@ -20,6 +21,13 @@ public class FilterData {
     public FilterData(String name, String value) {
         this.name = name;
         this.value = value;
+        this.type = FilterData.VALUE;
+    }
+
+    public FilterData(String name, String value, boolean enable) {
+        this.name = name;
+        this.value = value;
+        this.enable = enable;
         this.type = FilterData.VALUE;
     }
 
@@ -45,5 +53,13 @@ public class FilterData {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
     }
 }

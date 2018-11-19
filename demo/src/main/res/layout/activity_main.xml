@@ -42,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:contentTextBackgroundRes="@drawable/type_choose_bg"
+            app:contentTextColorDisableRes="@color/filter_text_color_property_disable"
             app:contentTextColorRes="@color/filter_text_color_property"
             app:contentTextColorSelectRes="@color/filter_text_color_property_select"/>
 
@@ -71,7 +72,6 @@
         android:background="@android:color/black">
 
     </LinearLayout>
-
 
     <com.suntiago.filterview.flowLayout.filter.FilterView
         android:id="@+id/post_filter_square"

@@ -72,8 +72,8 @@ public class MainActivity extends Activity {
         list.add(new FilterData("黑白条纹1", "104"));
         list.add(new FilterData("白色1", "105"));
         list.add(new FilterData("黑色1", "106"));
-        list.add(new FilterData("咖啡色2", "107"));
-        list.add(new FilterData("黑白条纹3", "108"));
+        list.add(new FilterData("咖啡色2", "107", false));
+        list.add(new FilterData("黑白条纹3", "108", false));
         list.add(new FilterData("白色3", "1012"));
         list.add(new FilterData("黑色4", "1033"));
         list.add(new FilterData("咖啡色5", "1043"));
