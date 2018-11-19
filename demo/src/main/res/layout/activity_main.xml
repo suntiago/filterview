@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickOnFilterProvince"
+            android:text="选择省份"/>
+
+        <TextView
+            android:id="@+id/tv_province"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.suntiago.filterview.flowLayout.filter.FilterView
+            android:id="@+id/post_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentTextBackgroundRes="@drawable/type_choose_bg"
+            app:contentTextColorRes="@color/filter_text_color_property"
+            app:contentTextColorSelectRes="@color/filter_text_color_property_select"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clickOnFilterColor"
+                android:text="确定"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_color_chose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/black">
+
+    </LinearLayout>
+
+
+    <com.suntiago.filterview.flowLayout.filter.FilterView
+        android:id="@+id/post_filter_square"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentTextBackgroundRes="@drawable/type_choose_bg"
+        app:gravityCentre="true"/>
+
+</LinearLayout>

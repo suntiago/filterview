@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="check_array">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+    </string-array>
+
+    <string-array name="week">
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+        <item>星期日</item>
+    </string-array>
+    <string-array name="province_array">
+        <item>京</item>
+        <item>津</item>
+        <item>冀</item>
+        <item>鲁</item>
+        <item>晋</item>
+        <item>蒙</item>
+        <item>辽</item>
+        <item>吉</item>
+        <item>黑</item>
+        <item>沪</item>
+        <item>苏</item>
+        <item>浙</item>
+        <item>皖</item>
+        <item>闽</item>
+        <item>赣</item>
+        <item>豫</item>
+        <item>鄂</item>
+        <item>湘</item>
+        <item>粤</item>
+        <item>桂</item>
+        <item>渝</item>
+        <item>川</item>
+        <item>贵</item>
+        <item>云</item>
+        <item>藏</item>
+        <item>陕</item>
+        <item>甘</item>
+        <item>青</item>
+        <item>琼</item>
+        <item>新</item>
+        <item>港</item>
+        <item>澳</item>
+        <item>台</item>
+        <item>宁</item>
+    </string-array>
+</resources>

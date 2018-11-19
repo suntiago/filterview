@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--start 流式布局-->
+    <color name="filter_text_color_property">#333</color>
+    <color name="filter_text_color_property_select">#c42429</color>
+    <color name="filter_text_bg_color">#ebebeb</color>
+    <color name="filter_light_grey3">#cccccc</color>
+    <color name="filter_app_def_color">#11d3c1</color>
+    <color name="title_red">#c42429</color>
+    <!--end 流式布局-->
+</resources>
