@@ -14,7 +14,7 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.suntiago:filterview:v1.0'
+	        implementation 'com.github.suntiago:filterview:v1.1'
 	}
 
 Capture:
