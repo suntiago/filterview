@@ -17,5 +17,6 @@ Add the dependency
 	        implementation 'com.github.suntiago:filterview:v1.0'
 	}
 
-capture:
-!["filterview"]()
+Capture:
+
+!["filterview"](https://github.com/suntiago/filterview/blob/master/capture.png)
