@@ -16,3 +16,6 @@ Add the dependency
 	dependencies {
 	        implementation 'com.github.suntiago:filterview:v1.0'
 	}
+
+capture:
+!["filterview"]()
