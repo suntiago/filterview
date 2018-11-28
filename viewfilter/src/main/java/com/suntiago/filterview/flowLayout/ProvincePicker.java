@@ -36,6 +36,13 @@ public class ProvincePicker {
         mProvinceCallback = provinceCallback;
     }
 
+    public ProvincePicker(String[] provinces, Activity activity, ProvinceCallback provinceCallback) {
+        mProvinces = provinces;
+        mActivity = activity;
+        mProvinceCallback = provinceCallback;
+    }
+
+
     /**
      * popupwindow弹窗
      */
